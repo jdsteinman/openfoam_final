@@ -289,7 +289,7 @@ top = np.array([
 ])
 
 boundaries=[inner, outer, top, bottom]
-bnames = ["inner","outer","bottom","top"]
+bnames = ["inner_wall","outer_wall","bottom","top"]
 btypes = ["wall", "wall", "patch", "patch"]
 
 # Write Boundaries
