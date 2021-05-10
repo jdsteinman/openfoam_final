@@ -278,7 +278,7 @@ bottom = np.array([
 ])
 
 top = np.array([
-    [6, 24, 25, 17],
+    [16, 24, 25, 17],
     [17, 25, 26, 18],
     [18, 26, 27, 19],
     [19, 27, 28, 20],
@@ -290,7 +290,7 @@ top = np.array([
 
 boundaries=[inner, outer, top, bottom]
 bnames = ["inner","outer","bottom","top"]
-btypes = ["patch", "patch", "wall", "symmetryPlane"]
+btypes = ["wall", "wall", "patch", "patch"]
 
 # Write Boundaries
 f.write("boundary\n")
