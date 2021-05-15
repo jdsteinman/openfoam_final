@@ -1,13 +1,12 @@
 import numpy as np
-import matplotlib.pyplot as plt
 from math import sqrt
 from datetime import date
 
 # Parameters #############################################
-r = 1.0
-R = 2.0
-H = 4.0
-res = 1.0
+r = 0.9
+R = 1.0
+H = 2.0
+res = 2.0
 
 ##########################################################
 
@@ -96,16 +95,16 @@ blocks = np.array([
 ])
 
 ncells = np.array([
-    [20, 20, 20],
-    [20, 20, 20],
-    [20, 20, 20],
-    [20, 20, 20],
-    [20, 20, 20],
-    [20, 20, 20],
-    [20, 20, 20],
-    [20, 20, 20]
+    [4, 12, 100],
+    [4, 12, 100],
+    [4, 12, 100],
+    [4, 12, 100],
+    [4, 12, 100],
+    [4, 12, 100],
+    [4, 12, 100],
+    [4, 12, 100]
 ]) 
-ncells[:,0:2] = np.around(ncells[:,0:2] * res)
+ncells = np.around(ncells * res)
 ncells = ncells.astype(int)
 
 grading = np.array([
@@ -313,16 +312,3 @@ for i, (name, arr, btype) in enumerate(zip(bnames, boundaries, btypes)):
 f.write(");")
 f.close()
 
-# plots
-fig, ax = plt.subplots(1,1)
-ax.set_title('Mesh Vertices')
-
-# Edit the font, font size, and axes widthmpl.rcParams['font.family'] = 'Avenir'
-plt.rcParams['font.size'] = 18
-plt.rcParams['axes.linewidth'] = 2
-
-# Vertices
-ax.scatter(vert[:,0], vert[:,1], c='k')
-ax.scatter(epoints[:,0], epoints[:,1], c='r')    
-
-plt.show()
