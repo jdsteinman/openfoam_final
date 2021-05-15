@@ -1,0 +1,8 @@
+/work2/06798/steinjd/stampede2/Re500
+Fri May 14 09:53:44 CDT 2021
+Running blockMesh on /work2/06798/steinjd/stampede2/Re500
+Running checkMesh on /work2/06798/steinjd/stampede2/Re500
+Running decomposePar on /work2/06798/steinjd/stampede2/Re500
+Running icoFoam in parallel on /work2/06798/steinjd/stampede2/Re500 using 32 processes
+Running reconstructPar on /work2/06798/steinjd/stampede2/Re500
+Fri May 14 11:13:51 CDT 2021
